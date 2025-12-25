@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nice HTML Demo</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --primary: #38bdf8;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(135deg, #020617, #0f172a);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 900px;
+      padding: 32px;
+    }
+
+    .hero {
+      background: rgba(17, 24, 39, 0.85);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 48px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 0 0 12px;
+    }
+
+    p {
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 24px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    }
+
+    .icon {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 32px;
+      padding: 14px 28px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+      color: #020617;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
+    }
+
+    footer {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="hero">
+      <h1>✨ My HTML Demo</h1>
+      <p>
+        A clean, modern single‑file HTML demo.
+        No frameworks, just HTML + CSS.
+        Perfect for learning, demos, or quick projects.
+      </p>
+
+      <div class="features">
+        <div class="card">
+          <div class="icon">⚡</div>
+          <h3>Fast</h3>
+          <p>Loads instantly. No external libraries.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🎨</div>
+          <h3>Modern</h3>
+          <p>Glassmorphism, gradients, smooth hover effects.</p>
+        </div>
+        <div class="card">
+          <div class="icon">📱</div>
+          <h3>Responsive</h3>
+          <p>Looks great on desktop and mobile.</p>
+        </div>
+      </div>
+
+      <a class="btn" href="#" onclick="alert('Hello from JavaScript!')">Try Action</a>
+    </section>
+
+    <footer>
+      © 2025 • Simple HTML Demo
+    </footer>
+  </div>
+</body>
+</html>
